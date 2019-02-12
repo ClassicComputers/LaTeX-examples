@@ -1,0 +1,352 @@
+\documentclass{article}
+%\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={210mm,297mm},
+	left=20mm,
+	right=20mm,
+	top=-2mm,
+	bottom=2mm,
+}
+%\usepackage[margin=0.5in]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{ifpdf}
+%\usepackage{cite}
+\usepackage{algorithmic}
+\usepackage{array}
+\usepackage{mdwmath}
+\usepackage{pdfpages}
+\usepackage{mdwtab}
+\usepackage{eqparbox}
+\usepackage{venndiagram}
+%\onecolumn
+%\input{psfig}
+\usepackage{color}
+\usepackage{graphicx}
+\setlength{\textheight}{23.5cm} \setlength{\topmargin}{-1.05cm}
+\setlength{\textwidth}{6.5in} \setlength{\oddsidemargin}{-0.5cm}
+\renewcommand{\baselinestretch}{1}
+\pagenumbering{arabic}
+
+\begin{document}
+	
+	\textbf{
+		\begin{center}
+			{
+				\large{School of Engineering and Applied Science (SEAS), Ahmedabad University}\vspace{5mm}
+			}
+		\end{center}
+		%
+		\begin{center}
+			\large{BTech(ICT) Semester IV: Probability and Random Processes (MAT202)\\ \vspace{4mm}
+				Homework Assignment-1\\\vspace{2mm}
+				Enrollment No:1641070 \hspace{6cm} Name: Nikhil Balwani }
+	\end{center}}
+	\vspace{2mm}
+	
+	
+	\begin{enumerate}
+		\item \large The given situation can be modelled as\\
+		$A = $ Students who join Spanish\\
+		$B = $ Students who join French\\
+		$C = $ Students who join German\\
+		
+		Total number of students = 100\\
+		Number of students taking Spanish, $Pr(A) = \frac{28}{100}$\\
+		Number of students taking French, $Pr(B) = \frac{26}{100}$\\
+		Number of students taking German, $Pr(C) = \frac{16}{100}$\\
+		Number of students taking Spanish and French, $Pr(A \cap B) = \frac{12}{100}$\\
+		Number of students taking French and German, $Pr(B \cap C) = \frac{6}{100}$\\
+		Number of students taking Spanish and German, $Pr(A \cap C) = \frac{4}{100}$\\
+		Number of students taking Spanish, French and German, $Pr(A \cap B \cap C) = \frac{2}{100}$
+		
+		
+		\begin{enumerate}
+			\item We know that, 
+			\begin{align*}
+			Pr(A \cup B \cup C) &= Pr(A) + Pr(B) + Pr(C) - Pr(A \cap B) - Pr(B \cap C) - Pr(A \cap C)\\& + Pr(A \cap B \cap C)
+			\end{align*}
+			Therefore,
+			\begin{align*}
+				\begin{split}
+					Pr(A \cup B \cup C) &= \dfrac{28}{100} + \dfrac{26}{100} + \dfrac{16}{100} - \dfrac{12}{100} - \dfrac{6}{100} - \dfrac{4}{100} + \dfrac{2}{100}\\
+					&= \frac{50}{100}
+				\end{split}
+			\end{align*}
+			and, 
+			\[\boxed{Pr(A \cup B \cup C)' = 1 - Pr(A \cup B \cup C)} \]
+			
+			\begin{align*}
+				\begin{split}
+					Pr(A \cup B \cup C)' &= 1 - \dfrac{50}{100}\\
+					&= \dfrac{50}{100}\\
+					&= \mathbf{0.5000}
+				\end{split}
+			\end{align*}
+			
+			\newpage
+			\item
+			
+			$D$ = \{The student is taking exactly one language class\}
+			%\begin{tikzpicture}
+			%	\hspace{3cm}
+			%	\tikzset{venn circle/.style={draw,circle,minimum %width=6cm,fill=#1,opacity=0.4}}
+			%	\node [venn circle = red] (A) at (0,0) {$\frac{15}{100}$};
+			%	\node [venn circle = blue] (B) at (60:4cm) {$\frac{11}{100}$};
+			%	\node [venn circle = green] (C) at (0:4cm) {$\frac{9}{100}$};
+			%	\node[left] at (barycentric cs:A=1/2,B=1/2 ) {$\frac{9}{100}$}; 
+			%	\node[below] at (barycentric cs:A=1/2,C=1/2 ) %{$\frac{1}{100}$};   
+			%	\node[right] at (barycentric cs:B=1/2,C=1/2 ) %{$\frac{3}{100}$};   
+			%	\node[below] at (barycentric cs:A=1/3,B=1/3,C=1/3 %){$\frac{3}{100}$};
+			%\end{tikzpicture}
+			
+			\begin{align*}
+			\begin{split}
+			Pr(A \cap B' \cap C') &= Pr(A) - Pr(A \cap B) - Pr(A \cap C) + Pr(A \cap B \cap C)\\ &= \dfrac{28}{100} - \dfrac{12}{100} - \dfrac{4}{100} + \dfrac{2}{100}\\ &= \dfrac{14}{100}\\ &= 0.1400
+			\end{split}
+			\end{align*}
+			
+			\begin{align*}
+			\begin{split}
+			Pr(A' \cap B \cap C') &= Pr(B) - Pr(A \cap B) - Pr(B \cap C) + Pr(A \cap B \cap C)\\ &= \dfrac{26}{100} - \dfrac{12}{100} - \dfrac{6}{100} + \dfrac{2}{100}\\ &= \dfrac{10}{100}\\ &= 0.1000
+			\end{split}
+			\end{align*}
+			
+			\begin{align*}
+				\begin{split}
+					Pr(A' \cap B' \cap C) &= Pr(C) - Pr(A \cap C) - Pr(B \cap C) + Pr(A \cap B \cap C)\\ &= \dfrac{16}{100} - \dfrac{4}{100} - \dfrac{6}{100} + \dfrac{2}{100}\\ &= \dfrac{8}{100}\\ &= 0.0800
+				\end{split}
+			\end{align*}
+			
+			\begin{align*}
+			\begin{split}
+			Pr(A' \cap B' \cap C) &= Pr(C) - Pr(A \cap C) - Pr(B \cap C) + Pr(A \cap B \cap C)\\ &= \dfrac{16}{100} - \dfrac{4}{100} - \dfrac{6}{100} + \dfrac{2}{100}\\ &= \dfrac{8}{100}\\ &= 0.0800
+			\end{split}
+			\end{align*}
+			
+			\begin{align*}
+				\begin{split}
+					Pr(D) &= Pr(A \cap B' \cap C') + Pr(A' \cap B \cap C') + Pr(A' \cap B' \cap C)\\ &= 0.1400 + 0.1000 + 0.0800\\ &= \mathbf{0.3200}
+				\end{split}
+			\end{align*}
+			\item 
+			
+			E = \{At least one takes a language class\}\\
+			F = E' = \{None take language class\}
+			
+			\begin{align*}
+				\begin{split}
+					Pr(E) &= 1 - Pr(F)\\
+						  &= 1 - \dfrac{50}{100} \times \dfrac{49}{99}\\
+						  &= 1 - 0.2475\\
+						  &= \mathbf{0.7525}
+				\end{split}
+			\end{align*}
+			
+		\end{enumerate}	
+		
+		\newpage
+		
+		\item \large
+		Let $A$ and $D$ be two events such that, \\
+		 
+		$A$ = \{The patient is positive on test A\}\\
+		$D$ = \{The patient is diseased\}\\
+		
+		\begin{align*}
+			Pr(D|A) &= \dfrac{Pr(A|D) Pr(D)}{Pr(A)}\\
+					&= \dfrac{(0.6)(1)}{(1)(0.6) + (0.3)(0.4)}\\
+					&= \mathbf{0.8333}
+		\end{align*}
+		
+		Since the probability is greater than 0.8, the doctor should recommend an immediate surgery.
+		
+		\newpage
+		
+		\item \large Let the events in this experiment be as below:
+		\\\\
+		$R_{1}$ = \{Getting a red on the first selection\}\\
+		$G_{1}$ = \{Getting a green on the first selection\}\\
+		$W_{1}$ = \{Getting a blue on the first selection\}\\
+		$R_{2}$ = \{Getting a red on the second selection\}\\
+		$W_{2}$ = \{Getting a green on the second selection\}\\
+		$B_{2}$ = \{Getting a blue on the second selection\}
+		\begin{enumerate}
+			\item
+			 \begin{align*}
+			 	Pr(R_{1}, B_{2}) &= \dfrac{^{3}C_{1}}{^{12}C_{1}} \times \dfrac{^{5}C_{1}}{^{11}C_{1}}\\
+			 	&= \mathbf{0.1136}
+			 \end{align*}
+			\item Replacement makes the two events independent of each other.
+			\begin{align*}
+				Pr(W_{2}) &= \dfrac{^{4}C_{1}}{^{12}C_{1}}\\
+						  &= \dfrac{1}{3}\\
+						  &= \mathbf{0.3333}
+			\end{align*}
+			\item 
+			\begin{align*}
+				Pr(W_{2}) &= \sum\limits_{i = 1}^{3} Pr(W_{2} | A_{i}) Pr(A_{i})\\
+					  &= Pr(W_{2} | R_{1}) Pr(R_{1}) + Pr(W_{2} | W_{1}) Pr(W_{1}) + Pr(W_{2} | B_{1}) Pr(B_{1})\\
+					  &= \dfrac{^{3}C_{1}}{^{12}C_{1}} \times \dfrac{^{4}C_{1}}{^{11}C_{1}} + \dfrac{^{4}C_{1}}{^{12}C_{1}} \times \dfrac{^{3}C_{1}}{^{11}C_{1}} + \dfrac{^{5}C_{1}}{^{12}C_{1}} \times \dfrac{^{4}C_{1}}{^{11}C_{1}}\\
+					  &= \dfrac{1}{3}\\
+					  &= \mathbf{0.3333}
+			\end{align*}
+		\end{enumerate}
+		
+		
+		\newpage
+		
+		\item \large
+		Let the events be described as below:\\
+		
+		$A_{i}$ = \{i unused balls were chosen during the first trial\}\\
+		$B$ = \{None of the balls have been used\}\\
+		
+		\begin{align*}
+		Pr(B) &= \sum\limits_{i = 1}^{n} Pr(B | A_{i}) Pr(A_{i})\\
+		Pr(B) &= Pr(B | A_{1}) Pr(A_{1}) + Pr(B | A_{2}) Pr(A_{2}) + Pr(B | A_{3}) Pr(A_{3})\\
+		&= \dfrac{^{9}C_{0} \times ^{6}C_{3}}{^{15}C_{3}} \times \dfrac{^{9}C_{3}}{^{15}C_{3}} + \dfrac{^{9}C_{1} \times ^{6}C_{2}}{^{15}C_{3}} \times \dfrac{^{8}C_{3}}{^{15}C_{3}} +  \dfrac{^{9}C_{2} \times ^{6}C_{1}}{^{15}C_{3}} \times \dfrac{^{7}C_{3}}{^{15}C_{3}} + \dfrac{^{9}C_{3} \times ^{6}C_{0}}{^{15}C_{3}} \times \dfrac{^{6}C_{3}}{^{15}C_{3}}\\
+		&= \mathbf{0.0893}
+		\end{align*}
+		
+		\newpage
+		
+		\item \large Let the events be described as below:\\
+		$A$ = \{The first selection is defective\}\\
+		$B$ = \{At least one is defective\}
+		
+		\begin{align*}
+			Pr(B) &= \sum\limits_{i = 1}^{n} Pr(B | A_{i}) Pr(A_{i})\\
+			Pr(B) &= Pr(B | A) Pr(A) + Pr(B | A') Pr(A')\\
+				  &= 1 \times \dfrac{^{5}C_{1}}{^{30}C_{1}} + \dfrac{^{5}C_{1}}{^{29}C_{1}} \times \dfrac{^{25}C_{1}}{^{30}C_{1}}\\
+				  &= \mathbf{0.3013}
+		\end{align*}
+		
+		\newpage
+		
+		\item \large 
+		
+		\begin{enumerate}
+			\item 
+			Let the events be described as below:\\
+			$A$ = \{5 occours in none of the throws\}\\
+			$B$ = \{5 occours in at least one of the throws\}\\
+			$C_{i}$ = \{5 occours in the $i^{th}$ throw\}
+			\begin{align*}
+				Pr(B) &= Pr(C_{1}) + Pr(C_{2}) - Pr(C_{1} \cap C_{2})\\
+				Pr(B) &= \dfrac{1}{6} + \dfrac{1}{6} - \dfrac{1}{6} \times \dfrac{1}{6}\\
+				&= \dfrac{11}{36}\\
+				Pr(A) &= 1 - Pr(B)\\
+				&= 1 - \dfrac{11}{36}\\
+				&= \dfrac{25}{36}\\
+				&= \mathbf{0.6944}
+			\end{align*}
+			
+			\item 
+			Let A be the event when the sum is 7:\\
+			$A$ = \{(1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1)\}\\
+			\begin{align*}
+			Pr(A) &= \dfrac{6}{36} \\
+				  &= \dfrac{1}{6}\\
+				  &= \mathbf{0.1667}
+			\end{align*}
+			
+			\item Let A be the event when the 2 dice show (5, 3):\\
+			Let B be the event when the 2 dice show (3, 5):\\
+			
+			A and B are two mutually exclusive events.
+			
+			\begin{align*}
+			Pr(C) &= Pr(A \cup B)\\
+			Pr(C) &= Pr(A) + Pr(B) - Pr(A \cap B) \\
+				  &= \dfrac{1}{6} \times \dfrac{1}{6} + \dfrac{1}{6} \times \dfrac{1}{6} - 0\\
+				  &= \dfrac{2}{36}\\
+				  &= \dfrac{1}{18}\\
+				  &= \mathbf{0.0556}
+			\end{align*}
+			
+			\newpage
+			\item
+			$A_{i}$ = \{Getting an i on the first throw\}\\
+			$B_{i}$ = \{Getting an i on the second throw\}
+			
+			\begin{align*}
+				Pr(A_{5}, B_{5} \cup B_{4}) &= Pr(A_{5}) (Pr(B_{5}) + Pr(B_{4})) && \text{($\because$ $B_{5}$ and $B_{4}$ are mutually exclusive)}\\
+											&= \dfrac{1}{6} \times (\dfrac{1}{6} + \dfrac{1}{6})\\
+											&= \dfrac{1}{18}\\
+											&= \mathbf{0.0556}
+			\end{align*}
+			
+			\item
+			$A_{5}$ = \{Getting a 5 on the first throw\}\\
+			$B_{5}$ = \{Getting a 5 on the second throw\}
+			
+			Both the events are independent of each other.
+			
+			\begin{align*}
+			Pr(A_{5}, B_{5}) &= Pr(A_{5}) \times Pr(B_{5}) && \text{($\because$ $A_{5}$ and $B_{5}$ are independent events)}\\
+			&= \dfrac{1}{6} \times \dfrac{1}{6}\\
+			&= \dfrac{1}{36}\\
+			&= \mathbf{0.0278}
+			\end{align*}
+			
+			\item
+			$A_{6}$ = \{Getting a 6 on the first throw\}\\
+			$B_{6}$ = \{Getting a 6 on the second throw\}
+			
+			\begin{align*}
+			Pr(A_{6}, B_{6}) &= Pr(A_{6}) \times Pr(B_{6}) && \text{($\because$ $A_{6}$ and $B_{6}$ are independent events)}\\
+			&= \dfrac{1}{6} \times \dfrac{1}{6}\\
+			&= \dfrac{1}{36}\\\\
+			Pr(A_{6} \cup B_{6}) &= Pr(A_{6}) + Pr(B_{6}) - Pr(A_{6}, B_{6})\\
+								 &= \dfrac{1}{6} + \dfrac{1}{6} - \dfrac{1}{36}\\
+								 &= \dfrac{11}{36}\\
+								 &= \mathbf{0.3056}
+			\end{align*}
+			
+			
+		\end{enumerate}
+		\newpage
+		
+		\item \large
+		
+		\begin{enumerate}
+			\item $A$ = \{First ace is drawn on $5^{th}$ selection\}
+			
+			\begin{align*}
+				Pr(A) &= \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{4}C_{1}}{^{52}C_{1}}\\
+				&= \dfrac{(48)^{4} \times 4}{(52)^{5}}\\
+				&= \mathbf{0.0558}
+			\end{align*}
+			\item
+			$A$ = \{At least 5 cards are drawn before the first ace appears\}
+			\begin{align*}
+			Pr(A) &= \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{4}C_{1}}{^{52}C_{1}}\\ &+ \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{48}C_{1}}{^{52}C_{1}} \times			 \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{4}C_{1}}{^{52}C_{1}}\\ &+ \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{4}C_{1}}{^{52}C_{1}}\\ &+ ... \infty\text{ terms}\\
+			&= \dfrac{(48)^{5} \times 4}{(52)^{6}} + \dfrac{(48)^{6} \times 4}{(52)^{7}} + \dfrac{(48)^{7} \times 4}{(52)^{8}} + ... \infty\text{ terms}\\
+			&= \dfrac{(48)^{5} \times 4}{(52)^{6}} \Big[1 + \dfrac{48}{52} + \Big(\dfrac{48}{52}\Big) ^{2} + \Big(\dfrac{48}{52}\Big) ^{3} + ... \infty\text{ terms}\Big]\\
+			&= \Big(\dfrac{12}{13}\Big)^{5}\\
+			&= \mathbf{0.6702}
+			\end{align*}
+			
+			\item $A$ = \{First ace is drawn on $5^{th}$ selection\}
+			\begin{align*}
+				Pr(A) &= \dfrac{^{48}C_{4}}{^{52}C_{4}} \times \dfrac{^{4}C_{1}}{^{48}C_{1}}\\
+					  &= \dfrac{194580}{270725} \times \dfrac{4}{48}\\
+					  &= \mathbf{0.0599} && \text{[Answer to corrsponding part (a)]}
+			\end{align*}
+			
+			$B$ = \{At least 5 cards are drawn before the first ace appears\}\\
+			$B'$ = \{The first ace appears within the first 5 selections\}
+			\begin{align*}
+				Pr(B) &= 1 - Pr(B')\\
+					  &= 1 - \Big[\dfrac{^{4}C_{1}}{^{52}C_{1}} + \dfrac{^{48}C_{1}}{^{52}C_{1}} \times \dfrac{^{4}C_{1}}{^{51}C_{1}}+ \dfrac{^{48}C_{2}}{^{52}C_{2}} \times \dfrac{^{4}C_{1}}{^{50}C_{1}} + \dfrac{^{48}C_{3}}{^{52}C_{3}} \times \dfrac{^{4}C_{1}}{^{49}C_{1}} + \dfrac{^{48}C_{4}}{^{52}C_{4}} \times \dfrac{^{4}C_{1}}{^{48}C_{1}}\Big]\\
+					  &= \mathbf{0.6588}\\ & \text{[Answer to corrsponding part (b)]}
+			\end{align*}
+			
+		\end{enumerate}
+		
+	\end{enumerate}
+	
+\end{document} 
